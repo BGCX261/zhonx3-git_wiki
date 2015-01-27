@@ -8,29 +8,41 @@ Comment installer votre environnement de développement Eclipse sur linux
 = Détails =
 
 ==1 - Telecharger Eclipse Luna C/C++ 64bits pour Linux==
-===http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz===
+http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/R/eclipse-cpp-luna-R-linux-gtk-x86_64.tar.gz
 ==2 - Installer==
 
-===sudo tar -xvzf '/home/zhonx/Téléchargements/eclipse-cpp-luna-SR1-linux-gtk-x86_64.tar.gz' -C /opt   //extraction dans /opt===
-===sudo chmod -R +r /opt/eclipse                           //permission d'ecriture===
-===____________________________Créer executable_____________________________  ===  
-===sudo touch /usr/bin/eclipse===
-===sudo chmod 755 /usr/bin/eclipse===
-===sudo apt-get install gedit         //installation editeur gedit si vous ne l'avez pas===
-===gedit /usr/bin/eclipse  ===          
+{{{
+sudo tar -xvzf '/home/zhonx/Téléchargements/eclipse-cpp-luna-SR1-linux-gtk-x86_64.tar.gz' -C /opt   //extraction dans /opt
+sudo chmod -R +r /opt/eclipse                           //permission d'ecriture
+}}}
+Créer exécutable    
+{{{
+sudo touch /usr/bin/eclipse
+sudo chmod 755 /usr/bin/eclipse
+sudo apt-get install gedit         //installation editeur gedit si vous ne l'avez pas
+gedit /usr/bin/eclipse
+}}}          
 
 ==ajoutez ces 3 lignes, enregistrez puis fermez :===
-===#!/bin/sh===
-===export ECLIPSE_HOME="/opt/eclipse"===
-===$ECLIPSE_HOME/eclipse $*===
+{{{
+#!/bin/sh
+export ECLIPSE_HOME="/opt/eclipse"
+$ECLIPSE_HOME/eclipse $*
+}}}
 ==3 - Installer openocd==
-===sudo apt-get install openocd libftdi-dev libusb-1.0-0-dev7===
+{{{
+sudo apt-get install openocd libftdi-dev libusb-1.0-0-dev7
+}}}
 ==4 - Installer gcc==
-===sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded===
-===sudo apt-get update===
-===sudo apt-get install gcc-arm-none-eabi=4.8.4.2014q3-0trusty11===
+{{{
+sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded
+sudo apt-get update
+sudo apt-get install gcc-arm-none-eabi=4.8.4.2014q3-0trusty11
+}}}
 ==5 - Lancer Éclipse==
- ==='/opt/eclipse/eclipse'===
+{{{
+'/opt/eclipse/eclipse'
+}}}
 ==6 - Installer plugin arm==
 dans Eclispe :
 help => install new software => work with http://gnuarmeclipse.sourceforge.net/updates
