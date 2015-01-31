@@ -128,7 +128,7 @@ Gérer un conflit avec un outil de fusion à 3 directions :
 git mergetool
 </code>
 
-Git demande le mot de passe à chaque fois, Il est possible de rentrer les mots de passe dans un fichier .netrc dans le répertoire utilisateur (/home/<user>. Le fichier ressemble à ceci :
+Git demande le mot de passe à chaque fois, Il est possible de rentrer les mots de passe dans un fichier .netrc dans le répertoire utilisateur (/home/<user>). Le fichier ressemble à ceci :
 
 <code language=bash>
 machine code.google.com login usernamea@gmail.com password blablabla
