@@ -127,3 +127,13 @@ Gérer un conflit avec un outil de fusion à 3 directions :
 <code language=bash>
 git mergetool
 </code>
+
+git demande le mot de passe à chaque fois, Il est possible de rentrer les mots de passe dans un fichier .netrc dans le répertoire utilisateur. Le fichier ressemble à ceci :
+
+<code language=bash>
+machine code.google.com login usernamea@gmail.com password blablabla
+</code>
+
+Mais si lors de la création du dépot, l'url utilisée contenait l'identiant, git demandera le mot de passe
+à chaque fois. Afin de résoudre le problème, il faut se placer dans le répertoire du dépot. Puis aller dans
+le sous-dossier .git et modier dans le fichier config pour enlever la partie login@ qu'il pourrait y avoir.
