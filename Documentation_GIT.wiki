@@ -137,3 +137,11 @@ machine code.google.com login usernamea@gmail.com password blablabla
 Mais si lors de la création du dépot, l'url utilisée contenait l'identiant, git demandera le mot de passe
 à chaque fois. Afin de résoudre le problème, il faut se placer dans le répertoire du dépot. Puis aller dans
 le sous-dossier .git et modier dans le fichier config pour enlever la partie login@ qu'il pourrait y avoir.
+
+Si vous utilisez git gui et que vous avez ce message d'erreur au lancement :
+Erreur : No word lists can be found for the language "fr_FR".
+Il faut installer un paquet aspell-fr qui contient le dictionnaire français pour aspell
+
+<code language=bash>
+sudo apt-get install aspell-fr
+</code>
