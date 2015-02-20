@@ -31,13 +31,13 @@ $ECLIPSE_HOME/eclipse $*
 }}}
 ==3 - Installer openocd==
 {{{
-sudo apt-get install openocd libftdi-dev libusb-1.0-0-dev7
+sudo apt-get install openocd libftdi-dev libusb-dev
 }}}
 ==4 - Installer gcc==
 {{{
 sudo add-apt-repository ppa:terry.guo/gcc-arm-embedded
 sudo apt-get update
-sudo apt-get install gcc-arm-none-eabi=4.8.4.2014q3-0trusty11
+sudo apt-get install gcc-arm-none-eabi
 }}}
 ==5 - Lancer Éclipse==
 {{{
