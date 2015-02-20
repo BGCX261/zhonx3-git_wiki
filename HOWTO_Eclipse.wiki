@@ -20,7 +20,7 @@ Créer exécutable
 sudo touch /usr/bin/eclipse
 sudo chmod 755 /usr/bin/eclipse
 sudo apt-get install gedit         //installation editeur gedit si vous ne l'avez pas
-gedit /usr/bin/eclipse
+sudo gedit /usr/bin/eclipse
 }}}          
 
 ==ajoutez ces 3 lignes (au fichier vide), enregistrez puis fermez :===
