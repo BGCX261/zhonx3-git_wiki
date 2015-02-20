@@ -12,7 +12,7 @@ http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/rel
 ==2 - Installer==
 
 {{{
-sudo tar -xvzf '/home/zhonx/Téléchargements/eclipse-cpp-luna-SR1-linux-gtk-x86_64.tar.gz' -C /opt   //extraction dans /opt
+sudo tar -xvzf '/home/zhonx/Téléchargements/eclipse-cpp-luna-SR1a-linux-gtk-x86_64.tar.gz' -C /opt   //extraction dans /opt
 sudo chmod -R +r /opt/eclipse                           //permission d'ecriture
 }}}
 Créer exécutable    
