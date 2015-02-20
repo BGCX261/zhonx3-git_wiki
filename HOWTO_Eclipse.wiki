@@ -45,5 +45,5 @@ sudo apt-get install gcc-arm-none-eabi
 }}}
 ==6 - Installer plugin arm==
 dans Eclispe :
-help => install new software => work with http://gnuarmeclipse.sourceforge.net/updates
+help => install new software => renseigner dans le champ "work with" l'adresse suivante "http://gnuarmeclipse.sourceforge.net/updates"
 installez le plugin
