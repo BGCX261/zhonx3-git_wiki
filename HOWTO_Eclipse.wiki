@@ -47,3 +47,34 @@ sudo apt-get install gcc-arm-none-eabi
 dans Eclispe :
 help => install new software => renseigner dans le champ "work with" l'adresse suivante "http://gnuarmeclipse.sourceforge.net/updates"
 installez le plugin
+==7 - Configurer la fonction "Flash" dans Eclipse==
+Cliquer sur l'icône en forme de flèche à droite de "External Tools" et choisir "External Tools Configuration"=>
+Cliquer sur "Program" et cliquer sur l'icône "New Launch Configuration"=>
+Saisir dans "Name" le nom de configuration "flash"
+Saisir dans "Location" : cliquer sur l'icône "Browse Filesystem" pour sélectionner le fichier "/usr/bin/openocd"=>
+Saisir dans "Working Directory" l'adresse "${workspace_loc/${project_name}}"=>
+Saisir dans "Arguments" l'ensemble de lignes suivantes :=>
+-f interface/stlink-v2.cfg
+-f target/stm32f4x_stlink.cfg
+
+-c "init" 
+
+-c "reset halt" -c "sleep 100" -c "wait_halt 2" -c "flash write_image erase ${config_name:/${project_name}}/${project_name}.elf" -c "verify_image  ${config_name:/${project_name}}/${project_name}.elf" -c "sleep 100" -c "reset run" -c "exit"=>
+Dans l'onglet "Common", cliquer sur la boîte à cocher "External Tools" (Display in favorites menu)=>
+Cliquer sur le bouton "Apply" puis sur "Close"=>
+==8 - Configurer le Debug==
+Cliquer sur l'icône en forme de flèche à droite de "Debug zhonx3" et choisir "Debug Configurations"=>
+Cliquer sur "GDB OpenOCD Debugging" et cliquer sur l'icône "New Launch Configuration"=>
+Saisir dans "Name" le nom de configuration "Debug"=>
+Saisir dans "C/C++ Application" la ligne suivante : ${workspace_loc:/${project_name}}/${config_name:/${project_name}}/${project_name}.elf=>
+Saisir dans "Project" le nom "${project_name}"=>
+Cliquer sur l'onglet "Debugger"
+Dans la première partie (OpenOCD setup), saisir dans "Config options" les deux lignes suivantes =>
+-f interface/stlink-v2.cfg
+-f target/stm32f4x_stlink.cfg=>
+Dans la seconde partie (GDB Client Setpup), remplacer le contenu de la zone "Commandes" par l'ensemble des lignes suivantes :
+set mem inaccessible-by-default off
+set remote hardware-breakpoint-limit 6
+set remote hardware-watchpoint-limit 4=>
+Dans l'onglet "Common", cliquer sur la boîte à cocher "Debug" (Display in favorites menu)=>
+Cliquer sur le bouton "Apply" puis sur "Close"=>
