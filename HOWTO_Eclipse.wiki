@@ -23,7 +23,7 @@ sudo apt-get install gedit         //installation editeur gedit si vous ne l'ave
 gedit /usr/bin/eclipse
 }}}          
 
-==ajoutez ces 3 lignes, enregistrez puis fermez :===
+==ajoutez ces 3 lignes (au fichier vide), enregistrez puis fermez :===
 {{{
 #!/bin/sh
 export ECLIPSE_HOME="/opt/eclipse"
