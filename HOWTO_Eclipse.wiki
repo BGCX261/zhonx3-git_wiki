@@ -87,7 +87,7 @@ Cliquer sur l'onglet "Debugger"
 Dans la première partie (OpenOCD setup), saisir dans "Config options" les deux lignes suivantes =>
 {{{
 -f interface/stlink-v2.cfg
--f target/stm32f4x_stlink.cfg=>
+-f target/stm32f4x_stlink.cfg
 }}}
 Dans la seconde partie (GDB Client Setpup), remplacer le contenu de la zone "Commandes" par l'ensemble des lignes suivantes :
 {{{
