@@ -76,10 +76,13 @@ Cliquer sur l'icône en forme de flèche à droite de "Debug zhonx3" et choisir 
 Cliquer sur "GDB OpenOCD Debugging" et cliquer sur l'icône "New Launch Configuration"=>
 Saisir dans "Name" le nom de configuration "Debug"=>
 Saisir dans "C/C++ Application" la ligne suivante :
-{{{ ${workspace_loc:/${project_name}}/${config_name:/${project_name}}/${project_name}.elf
+{{{ 
+${workspace_loc:/${project_name}}/${config_name:/${project_name}/${project_name}.elf
 }}}
 Saisir dans "Project" le nom 
-{{{${project_name}}}}
+{{{
+${project_name}
+}}}
 Cliquer sur l'onglet "Debugger"
 Dans la première partie (OpenOCD setup), saisir dans "Config options" les deux lignes suivantes =>
 {{{
