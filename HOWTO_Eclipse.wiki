@@ -66,8 +66,10 @@ Saisir dans "Arguments" l'ensemble de lignes suivantes :
 
 -c "init" 
 
--c "reset halt" -c "sleep 100" -c "wait_halt 2" -c "flash write_image erase ${config_name:/${project_name}}/${project_name}.elf" -c 
-"verify_image  ${config_name:/${project_name}}/${project_name}.elf" -c "sleep 100" -c "reset run" -c "exit"
+-c "reset halt"
+-c "sleep 100"
+-c "wait_halt 2"
+-c "flash write_image erase ${config_name:/${project_name}}/${project_name}.elf" -c "verify_image  ${config_name:/${project_name}}/${project_name}.elf" -c "sleep 100" -c "reset run" -c "exit"
 }}}
 Dans l'onglet "Common", cliquer sur la boîte à cocher "External Tools" (Display in favorites menu)=>
 Cliquer sur le bouton "Apply" puis sur "Close"
